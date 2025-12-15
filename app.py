@@ -43,5 +43,8 @@ def index():
 
         except Exception as e:
             result = f"<p style='color:red;'>Error: {e}</p>"
+            
+            return render_template("index.html", result=result)
 
-    return render_template("index.html", result=result)
+if __name__ == "__main__":
+    app.run(debug=True)
